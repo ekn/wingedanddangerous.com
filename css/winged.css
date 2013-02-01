@@ -1,37 +1,28 @@
-/** YUI reset **/
-
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
-	margin:0;
-	padding:0;
-}
-table {
-	border-collapse:collapse;
-	border-spacing:0;
-}
-fieldset,img { 
-	border:0;
-}
-address,caption,cite,code,dfn,em,strong,th,var {
-	font-style:normal;
-	font-weight:normal;
-}
-ol,ul {
-	list-style:none;
-}
-caption,th {
-	text-align:left;
-}
-h1,h2,h3,h4,h5,h6 {
-	font-size:100%;
-	font-weight:normal;
-}
-q:before,q:after {
-	content:'';
-}
-abbr,acronym { border:0;
+#container {
+    margin: 20px auto;
+    padding: 0 0 1em 0;
+    max-width: 58.75em;      /* 940px / 16px = 58.75em */
 }
 
-/** end YUI **/
+#left-container {	
+	float: left;
+	max-width: 13.75em;      /* 220px / 16px = 13.75em */
+	background: #acacac;
+	min-height: 1000px;
+	}
+
+header {
+}
+nav {	
+}
+#right-container {
+	float: right;
+	max-width: 43.75em;      /* 700px / 16px = 43.75em */
+	background: aqua;
+		min-height: 1000px;
+
+
+}
 
 h1 {display: none;}
 
@@ -39,14 +30,6 @@ ul {
     font-family: Helvetica, sans-serif;
     font-size: 0.875em;      /* 14px / 16px = 0.875em */
 }
- 
-#page {
-    margin: 40px auto;
-    padding: 0 0 1em 0;
-    max-width: 60em;      /* 960px / 16px = 60em */
-}
-
-
 
 flexible grids
 flexible images and media 
