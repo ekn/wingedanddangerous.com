@@ -32,11 +32,32 @@ abbr,acronym { border:0;
 }
 
 /** end YUI **/
- 
 
+h1 {display: none;}
+
+ul {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.875em;      /* 14px / 16px = 0.875em */
+}
+ 
+#page {
+    margin: 40px auto;
+    padding: 0 0 1em 0;
+    max-width: 60em;      /* 960px / 16px = 60em */
+}
 
 
 
 flexible grids
 flexible images and media 
 css media queries
+
+::-moz-selection,
+::selection {
+  background: #dfa054;
+
+.alpha:first-letter,
+.bravo:first-line {
+  color: #dfa054;
+  font-size: 18px;
+}
