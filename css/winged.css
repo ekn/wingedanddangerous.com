@@ -1,27 +1,36 @@
 #container {
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 0 0 1em 0;
-    max-width: 58.75em;      /* 940px / 16px = 58.75em */
+    max-width: 60em;      /* 960px / 16px = 60em */
+    background: #e20000;
+
 }
 
-#left-container {	
+.left-container {
 	float: left;
-	max-width: 13.75em;      /* 220px / 16px = 13.75em */
+	width: 22.916667%;      /* 220px / 960px = .22916667 */
+	margin: auto 01.0416667%;      /* 10px / 960px = .010416667 */
 	background: #acacac;
-	min-height: 1000px;
+	height: 300px;
 	}
+
+.right-container {
+	float: right;
+	width: 72.916667%;      /* 700px / 960px = .72916667 */
+	margin: auto 01.0416667%;      /* 10px / 960px = .010416667 */
+	background: aqua;
+	height: 300px;
+
+}
 
 header {
 }
+
+.logo a:link {background-image: url(/img/winged-x.png);}
+.logo a:visited {}
+.logo a:hover {background-image: url(/img/winged-v.png);}
+
 nav {	
-}
-#right-container {
-	float: right;
-	max-width: 43.75em;      /* 700px / 16px = 43.75em */
-	background: aqua;
-		min-height: 1000px;
-
-
 }
 
 h1 {display: none;}
@@ -31,6 +40,7 @@ ul {
     font-size: 0.875em;      /* 14px / 16px = 0.875em */
 }
 
+/*
 flexible grids
 flexible images and media 
 css media queries
@@ -44,3 +54,4 @@ css media queries
   color: #dfa054;
   font-size: 18px;
 }
+*/
