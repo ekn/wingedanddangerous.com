@@ -1,46 +1,150 @@
+body {
+	background: #d3e5e3;
+}
+
 #container {
     margin: 0 auto;
     padding: 0 0 1em 0;
-    max-width: 60em;      /* 960px / 16px = 60em */
-    background: #e20000;
+    max-width: 60em;      /* 960px/16px = 60em */
+    background: #fff;
+}
+
+#masthead {
+	display: block;
+	margin-bottom: 20px;
+	min-height: 250px;
+	background: #ed96e8;
+}
+
+.logo {
+	display: block;
+	float: left;
+	width: 22.916667%;      /* 220px/960px = .22916667 */
+	margin: 0 01.0416667%;      /* 10px/960px = .010416667 */
+}
+.logo a {
+	display: block;
+	width: 160px;
+	height: 76px;
+	background: url(../img/winged-xv.png) no-repeat top left;
+	}
+.logo img {
+	display: block;
+	height: 0;
+	}
+.logo a:hover {
+	background-position: 0 -76px;
+	}
+
+nav {
+	display: block;
+	float: right;
+	width: 72.916667%;      /* 700px/960px = .72916667 */
+	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+	}
+
+header {
+	display: block;
+	float: right;
+	width: 72.916667%;      /* 700px/960px = .72916667 */
+	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+	text-align: left;
+}
+
+section {
+	display: block;
+	width: 100%;
+	background: #acacac;
+	min-height: 250px;
+	}
+
+h1 {
+	display: block;
+	font-family: Helvetica, sans-serif;
+    font-size: 1.875em;      /* 30px/16px = 1.875em */
+}
+
+ul {
+	list-style-type: none;
+	text-align: left;
+}
+
+li {
+	display: block;
+	float: left;
+}
+
+nav ul {
+	padding: 0;
 
 }
 
-.left-container {
+section header {
+	display: block;
+	float: none;
+	min-height: 100px;
+	width: 100%;
+	margin: auto 0;
+	background: #f01b1b;
+}
+
+section ul {
+	width: 100%;
+	padding-left: 0;
+}
+
+section li {
+	display: block;
 	float: left;
-	width: 22.916667%;      /* 220px / 960px = .22916667 */
-	margin: auto 01.0416667%;      /* 10px / 960px = .010416667 */
+	width: 31.25%;      /* 300px/960px = .3125 */
+	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
+}
+
+section img {
+	width: 100%;    
+	height: 100%;
+}
+
+section h2 {
+	display: block;
+	float: right;
+	width: 72.916667%;      /* 700px/960px = .72916667 */
+	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+	letter-spacing: 10px; 
+}
+
+.winged-up {
+	display: block;
+	float: left;
+	width: 22.916667%;      /* 220px/960px = .22916667 */
+	margin: 0 01.0416667%;      /* 10px/960px = .010416667 */
+}
+
+.winged-up img {
+	width: auto;
+	height: auto;
+}
+
+/* 
+
+    font-family: Helvetica, sans-serif;
+    font-size: 0.875em;      14px / 16px = 0.875em
+
+.container-1 {
+	float: left;
+	width: 22.916667%;      220px / 960px = .22916667
+	margin: auto 01.0416667%;      10px / 960px = .010416667
 	background: #acacac;
 	height: 300px;
 	}
 
-.right-container {
+.container-2 {
 	float: right;
-	width: 72.916667%;      /* 700px / 960px = .72916667 */
-	margin: auto 01.0416667%;      /* 10px / 960px = .010416667 */
+	width: 72.916667%;      700px / 960px = .72916667
+	margin: auto 01.0416667%;      10px / 960px = .010416667
 	background: aqua;
 	height: 300px;
 
-}
-
-header {
-}
-
-.logo a:link {background-image: url(/img/winged-x.png);}
-.logo a:visited {}
-.logo a:hover {background-image: url(/img/winged-v.png);}
-
-nav {	
-}
-
-h1 {display: none;}
-
-ul {
-    font-family: Helvetica, sans-serif;
-    font-size: 0.875em;      /* 14px / 16px = 0.875em */
-}
-
-/*
 flexible grids
 flexible images and media 
 css media queries
