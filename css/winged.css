@@ -18,8 +18,6 @@ body {
 	background: #d3e5e3;
 }
 
-@media screen and (max-width: 960px) {
-
 #container {
     margin: 0 auto;
     padding: 0 0 1em 0;
@@ -27,26 +25,13 @@ body {
     background: #fff;
 }
 
-header {      /* in masthead and sections */
-	display: block;
-	text-align: left;
-}
+header {*zoom: 1;}
 header:before, header:after {content: ""; display: table;}
 header:after {clear: both;}
 
-#masthead {
-	display: block;
+header[role="banner"] {      /* in masthead and sections */
 	margin-bottom: 20px;
-	*zoom: 1;
 	background: #ed96e8;
-}
-#masthead:before, #masthead:after {content: ""; display: table;}
-#masthead:after {clear: both;}
-
-#masthead header {
-	float: right;
-	width: 72.916667%;      /* 700px/960px = .72916667 */
-	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
 }
 
 .logo {
@@ -79,8 +64,19 @@ nav ul {
 	padding: 0;
 }
 
+header h1 {
+	float: right;
+	width: 72.916667%;      /* 700px/960px = .72916667 */
+	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+}
+
+header p {
+	float: right;
+	width: 72.916667%;      /* 700px/960px = .72916667 */
+	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+}
+
 section {
-	display: block;
 	width: 100%;
 	background: #acacac;
 	*zoom: 1;
@@ -89,11 +85,12 @@ section:before, section:after {content: ""; display: table;}
 section:after {clear: both;}
 
 section header {
-	float: none;
 	width: 100%;
 	margin: auto 0;
 	background: #f01b1b;
 }
+
+@media screen and (max-width: 1050px) {
 
 section h2 {
 	display: block;
@@ -133,9 +130,9 @@ section img {
 }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
 
-    #masthead header {
+    header[role="banner"] {
 		float: right;
 		width: 63.888889%;      /* 460px/720px = .63888889 */
 		margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
