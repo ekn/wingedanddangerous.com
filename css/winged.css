@@ -71,7 +71,11 @@ nav {
 	float: right;
 	width: 72.916667%;      /* 700px/960px = .72916667 */
 	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+	*zoom: 1;
 	}
+nav:before, nav:after {content: ""; display: table;}
+nav:after {clear: both;}
+
 nav ul {
 	padding: 0;
 }
@@ -135,15 +139,13 @@ section img {
 		float: none;
 		margin: 0 auto;
 	}
+	
 	header[role="banner"] h1, header[role="banner"] p, nav {
 		float: none;
 		margin: 0 auto;
 	}
 	
-	header[role="banner"] h1 {
-		width: auto;
-	}
-	
+		
 	section li {
 		float: left;
 		width: 44%;
