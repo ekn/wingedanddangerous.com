@@ -1,7 +1,13 @@
+body {
+	background: #FFF;
+}
+
 h1 {
 	display: block;
-	font-family: Helvetica, sans-serif;
-    font-size: 1.875em;      /* 30px/16px = 1.875em */
+	font-family:'Lato', Helvetica, sans-serif;
+    font-size: 2.5em;      /* 40px/16px = 2.5em */
+    font-weight: 100;
+    text-transform: uppercase;
 }
 
 ul {
@@ -15,25 +21,20 @@ li {
 	float: left;
 }
 
-body {
-	background: #d3e5e3;
-}
-
-#container {
-    margin: 0 auto;
+.portfolio, footer, header[role="banner"] {
+	margin: 0 auto;
     padding: 0 0 1em 0;
     max-width: 60em;      /* 960px/16px = 60em */
-    background: #fff;
+}
+
+.head-container {
+	margin-bottom: 20px;
+	background: #ccc url(../img/meadow.jpg);
 }
 
 header {*zoom: 1;}
 header:before, header:after {content: ""; display: table;}
 header:after {clear: both;}
-
-header[role="banner"] {      /* in masthead and sections */
-	margin-bottom: 20px;
-	background: #ed96e8;
-}
 
 header[role="banner"] h1 {
 	float: right;
@@ -48,10 +49,14 @@ header[role="banner"] p {
 }
 
 .logo {
+	position: relative;
+	z-index: 40;
 	display: block;
 	float: left;
 	width: 22.916667%;      /* 220px/960px = .22916667 */
-	margin: 0 01.0416667%;      /* 10px/960px = .010416667 */
+	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+	padding-top: 20px;
+	background: #df90cf;
 }
 .logo a {
 	display: block;
@@ -68,41 +73,25 @@ header[role="banner"] p {
 	}
 
 nav {
-	float: right;
-	width: 72.916667%;      /* 700px/960px = .72916667 */
-	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+	position: fixed;
+	width: 100%;      /* 700px/960px = .72916667 */
+	background: #99f9f2;
 	*zoom: 1;
 	}
 nav:before, nav:after {content: ""; display: table;}
 nav:after {clear: both;}
 
 nav ul {
+	max-width: 960px;
+	margin: 0 auto;
 	padding: 0;
 }
 
-section {
-	width: 100%;
-	background: #acacac;
-	*zoom: 1;
-	}
-section:before, section:after {content: ""; display: table;}
-section:after {clear: both;}
-
-section header {
-	width: 100%;
-	margin: auto 0;
-	background: #f01b1b;
+nav li {
+	margin-right: 20px;
 }
 
-section h2 {
-	display: block;
-	float: right;
-	width: 72.916667%;      /* 700px/960px = .72916667 */
-	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
-	letter-spacing: 10px; 
-}
-
-.winged-up {
+.winged-up li {
 	display: block;
 	float: left;
 	width: 22.916667%;      /* 220px/960px = .22916667 */
@@ -114,19 +103,40 @@ section h2 {
 	height: auto;
 }
 
-section ul {
+.portfolio {
+	background: #acacac;
+	*zoom: 1;
+	}
+.portfolio:before, .portfolio:after {content: ""; display: table;}
+.portfolio:after {clear: both;}
+
+.portfolio header {
+	width: 100%;
+	margin: auto 0;
+	background: #f01b1b;
+}
+
+.portfolio h2 {
+	display: block;
+	float: right;
+	width: 72.916667%;      /* 700px/960px = .72916667 */
+	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+	letter-spacing: 10px; 
+}
+
+.folio ul {
 	width: 100%;
 	padding-left: 0;
 }
 
-section li {
+.folio li {
 	display: block;
 	float: left;
 	width: 31.25%;      /* 300px/960px = .3125 */
 	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
 }
 
-section img {
+.folio img {
 	width: 100%;    
 	height: 100%;
 }
@@ -146,7 +156,7 @@ section img {
 	}
 	
 		
-	section li {
+	.folio li {
 		float: left;
 		width: 44%;
 		margin: 0 3% 20px;  
@@ -154,7 +164,7 @@ section img {
 }
 
 @media screen and (max-width: 500px) {
-	section li {
+	.folio li {
 		float: none;
 		width: 80%;
 		margin: 0 10% 20px;  
