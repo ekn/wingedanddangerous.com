@@ -4,9 +4,9 @@ body {
 
 h1 {
 	display: block;
-	font-family:'Lato', Helvetica, sans-serif;
+	font-family: 'Antic Slab', serif;
     font-size: 2.5em;      /* 40px/16px = 2.5em */
-    font-weight: 100;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
@@ -21,7 +21,11 @@ li {
 	float: left;
 }
 
-.portfolio, footer, header[role="banner"] {
+.folio, .about {*zoom: 1;}
+.folio:before, .folio:after {content: ""; display: table;}
+.folio:after {clear: both;}
+
+.portfolio, .about, footer, header[role="banner"] {
 	margin: 0 auto;
     padding: 0 0 1em 0;
     max-width: 60em;      /* 960px/16px = 60em */
@@ -29,7 +33,7 @@ li {
 
 .head-container {
 	margin-bottom: 20px;
-	background: #ccc url(../img/meadow.jpg);
+	background: #ff0000;
 }
 
 header {*zoom: 1;}
@@ -39,7 +43,7 @@ header:after {clear: both;}
 header[role="banner"] h1 {
 	float: right;
 	width: 72.916667%;      /* 700px/960px = .72916667 */
-	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+	margin: 60px 01.0416667% 0;      /* 10px/960px = .010416667 */
 }
 
 header[role="banner"] p {
@@ -53,10 +57,9 @@ header[role="banner"] p {
 	z-index: 40;
 	display: block;
 	float: left;
-	width: 22.916667%;      /* 220px/960px = .22916667 */
-	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
-	padding-top: 20px;
-	background: #df90cf;
+	width: 160px;
+	padding: 20px;
+	background: #fff;
 }
 .logo a {
 	display: block;
@@ -74,28 +77,30 @@ header[role="banner"] p {
 
 nav {
 	position: fixed;
-	width: 100%;      /* 700px/960px = .72916667 */
-	background: #99f9f2;
+	width: 100%;
+	background: #000;
+	margin-top: 5px;
 	*zoom: 1;
 	}
 nav:before, nav:after {content: ""; display: table;}
 nav:after {clear: both;}
 
 nav ul {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 0;
+    max-width: 60em;      /* 960px/16px = 60em */
+	margin: auto;
 }
 
 nav li {
-	margin-right: 20px;
+	float: left;
+	width: 20%;
+	background: #000;
+	color: #fff;
 }
-
-.winged-up li {
+.winged-up {
 	display: block;
 	float: left;
-	width: 22.916667%;      /* 220px/960px = .22916667 */
-	margin: 0 01.0416667%;      /* 10px/960px = .010416667 */
+	width: 20%;
+	margin-right: 20%;
 }
 
 .winged-up img {
@@ -105,32 +110,27 @@ nav li {
 
 .portfolio {
 	background: #acacac;
-	*zoom: 1;
 	}
-.portfolio:before, .portfolio:after {content: ""; display: table;}
-.portfolio:after {clear: both;}
 
 .portfolio header {
 	width: 100%;
-	margin: auto 0;
-	background: #f01b1b;
 }
 
 .portfolio h2 {
-	display: block;
-	float: right;
-	width: 72.916667%;      /* 700px/960px = .72916667 */
-	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
-	letter-spacing: 10px; 
+	font-family: 'Antic Slab', serif;
+    font-weight: 400;    
+    font-size: 3em;      /* 40px/16px = 2.5em */
+    text-align: center;
 }
 
-.folio ul {
-	width: 100%;
-	padding-left: 0;
+.folio {
+	padding: 0;
+	*zoom: 1;
 }
+.folio:before, .folio:after {content: ""; display: table;}
+.folio:after {clear: both;}
 
 .folio li {
-	display: block;
 	float: left;
 	width: 31.25%;      /* 300px/960px = .3125 */
 	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
@@ -139,6 +139,28 @@ nav li {
 .folio img {
 	width: 100%;    
 	height: 100%;
+}
+
+.about {
+	background: #ff1100;
+	}
+
+.about header {
+	width: 100%;
+}
+
+.about h2 {
+	font-family: 'Antic Slab', serif;
+    font-weight: 400;    
+    font-size: 3em;      /* 40px/16px = 2.5em */
+    text-align: center;
+    color: #fff;
+}
+
+.about-sect {
+	float: left;
+	width: 31.25%;      /* 300px/960px = .3125 */
+	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
 }
 
 @media screen and (max-width: 1050px) {
