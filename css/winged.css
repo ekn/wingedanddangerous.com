@@ -4,11 +4,19 @@ body {
 
 h1 {
 	display: block;
-	font-family: 'Antic Slab', serif;
+	font-family: 'Antic Slab', sans-serif;
     font-size: 2.5em;      /* 40px/16px = 2.5em */
     font-weight: 400;
     text-transform: uppercase;
 }
+
+h2 {
+	font-family: 'Antic Slab', sans-serif;
+    font-weight: 400;    
+    font-size: 3em;      /* 40px/16px = 2.5em */
+    text-align: center;
+}
+
 
 ul {
 	display: block;
@@ -21,24 +29,35 @@ li {
 	float: left;
 }
 
-.folio, .about {*zoom: 1;}
-.folio:before, .folio:after {content: ""; display: table;}
-.folio:after {clear: both;}
+::selection, ::-moz-selection {
+background-color: #00aeef;
+}
 
-.portfolio, .about, footer, header[role="banner"] {
+/* CLEAR FIX */
+
+nav, header, .folio, .about {*zoom: 1;}
+nav:before, nav:after, header:before, header:after,  folio:before, .folio:after, .about:before, .about:after {content: ""; display: table;}
+nav:after, header:after, .folio:after, .about:after {clear: both;}
+
+/* MARGINS FOR MAIN SECTIONS */
+
+.portfolio, .about, header[role="banner"] {
 	margin: 0 auto;
     padding: 0 0 1em 0;
     max-width: 60em;      /* 960px/16px = 60em */
 }
 
+/* MARGIN-LESS MAIN SECTIONS (HEADER, ABOUT) */
+
 .head-container {
 	margin-bottom: 20px;
-	background: #ff0000;
+	background: #ff1100;
 }
 
-header {*zoom: 1;}
-header:before, header:after {content: ""; display: table;}
-header:after {clear: both;}
+.about-container {
+	background: #ff1100;
+	}
+
 
 header[role="banner"] h1 {
 	float: right;
@@ -75,15 +94,49 @@ header[role="banner"] p {
 	background-position: 0 -76px;
 	}
 
+/* WORKING NAV, FOLLOWED BY BROKEN BUT NEAT NAV 
+
 nav {
 	position: fixed;
 	width: 100%;
 	background: #000;
 	margin-top: 5px;
-	*zoom: 1;
 	}
-nav:before, nav:after {content: ""; display: table;}
-nav:after {clear: both;}
+	
+*/
+	
+nav {
+	position: fixed;
+    width: 90%;      /* 940px/960px = 0.97916667 */
+	background: #fff200;
+	margin: 5px 5% 0 5%;	/* 10px/960px = 0.010416667 */
+	}
+
+nav::before {
+left: -31px;
+border: 20px solid #000;
+border-left-color: transparent;
+}
+
+nav::before, nav::after {
+content: "";
+position: absolute;
+display: block;
+bottom: 0;
+z-index: -1;
+}
+
+nav::after {
+right: -20px;
+border-left-width: 20px;
+border-right-color: transparent;
+width: 0;
+height: 0;
+border-top: 20px solid transparent;
+border-bottom: 20px solid transparent;
+border-left: 20px solid #000;
+}
+
 
 nav ul {
     max-width: 60em;      /* 960px/16px = 60em */
@@ -108,27 +161,13 @@ nav li {
 	height: auto;
 }
 
-.portfolio {
-	background: #acacac;
-	}
-
-.portfolio header {
-	width: 100%;
-}
-
 .portfolio h2 {
-	font-family: 'Antic Slab', serif;
-    font-weight: 400;    
-    font-size: 3em;      /* 40px/16px = 2.5em */
-    text-align: center;
+	color: #ff1100;
 }
 
 .folio {
 	padding: 0;
-	*zoom: 1;
 }
-.folio:before, .folio:after {content: ""; display: table;}
-.folio:after {clear: both;}
 
 .folio li {
 	float: left;
@@ -141,21 +180,17 @@ nav li {
 	height: 100%;
 }
 
-.about {
-	background: #ff1100;
-	}
-
-.about header {
-	width: 100%;
-}
-
 .about h2 {
-	font-family: 'Antic Slab', serif;
-    font-weight: 400;    
-    font-size: 3em;      /* 40px/16px = 2.5em */
-    text-align: center;
-    color: #fff;
+    color: #eee;
 }
+
+.about p {
+	font-family: 'Vollkorn', serif;
+	font-weight: 400;
+	font-size: 1em;  
+	line-height: 1.5em;
+	color: #eee;
+	}
 
 .about-sect {
 	float: left;
@@ -176,7 +211,6 @@ nav li {
 		float: none;
 		margin: 0 auto;
 	}
-	
 		
 	.folio li {
 		float: left;
