@@ -17,6 +17,13 @@ h2 {
     text-align: center;
 }
 
+p {
+	font-family: 'Vollkorn', serif;
+	font-weight: 400;
+	font-size: 1em;  
+	line-height: 1.5em;
+	color: #000;
+	}
 
 ul {
 	display: block;
@@ -28,6 +35,12 @@ li {
 	display: block;
 	float: left;
 }
+
+a {text-decoration: none;}
+a:link {color:#fff;}     
+a:visited {color:#fff;} 
+a:hover {color:#fff200;}  
+a:active {color:#fff200;}
 
 ::selection, ::-moz-selection {
 background-color: #00aeef;
@@ -41,7 +54,7 @@ nav:after, header:after, .folio:after, .about:after {clear: both;}
 
 /* MARGINS FOR MAIN SECTIONS */
 
-.portfolio, .about, header[role="banner"] {
+.portfolio, .about, header {
 	margin: 0 auto;
     padding: 0 0 1em 0;
     max-width: 60em;      /* 960px/16px = 60em */
@@ -49,49 +62,78 @@ nav:after, header:after, .folio:after, .about:after {clear: both;}
 
 /* MARGIN-LESS MAIN SECTIONS (HEADER, ABOUT) */
 
-.head-container {
+/*.head-container {
+	display: block;
+	width: 100%;
+	height: 250px;
 	margin-bottom: 20px;
-	height: 300px;
-	background: url(../img/circles.jpg) no-repeat;
-	background-size: 100%;
-	overflow: hidden;
+	background: url(../img/circles.jpg) no-repeat; 
+	background-size: cover;  
+	z-index: -3;
+}*/
+
+.head-container {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	z-index: -3;
 }
 
 .about-container {
 	background: #ff1100;
 	}
 
-
-header[role="banner"] h1 {
-	float: right;
-	width: 72.916667%;      /* 700px/960px = .72916667 */
-	margin: 60px 01.0416667% 0;      /* 10px/960px = .010416667 */
+header h1 {
+	position: relative;
+    max-width: 60em;      /* 960px/16px = 60em */
+	margin: 90px 0 0 0;      /* 10px/960px = .010416667 */
+	text-align: center;
+	color: #000;
 }
 
-header[role="banner"] p {
-	float: right;
-	width: 72.916667%;      /* 700px/960px = .72916667 */
-	margin: auto 01.0416667%;      /* 10px/960px = .010416667 */
+/*
+
+h1::before, h1::after {
+position: absolute;
+display: block;
+}
+
+h1::before {
+	left: -31px;
+	background: url(../img/winged-left.png) no-repeat top left;
+}
+h1::after {
+	right: 31px;
+	background: url(../img/winged-right.png) no-repeat top left;
+}
+
+*/
+
+header p {
+	text-align: center;
+	margin: 0;    
 }
 
 .logo {
+	display: block;
 	position: relative;
 	z-index: 40;
-	display: block;
 	float: left;
 	width: 161px;
-	padding: 6px 0;
+	padding: 2px 0;
 }
+
 .logo a {
-	display: block;
+	display: block;	
 	width: 161px;
 	height: 70px;
 	background: url(../img/winged-xv.png) no-repeat top left;
 	}
+	
 .logo img {
-	display: block;
 	height: 0;
 	}
+	
 .logo a:hover {
 	background-position: 0 -70px;
 	}
@@ -102,27 +144,25 @@ nav {
 	position: fixed;
     width: 90%;
     height: 40px;
-	background-color: #fff200;
+	background-color: #5b9486;
 	margin: 15px 5% 0 5%;
 	}
 
 nav::before {
 left: -31px;
-border: 20px solid #fff200;
+border: 20px solid #5b9486;
 border-left-color: transparent;
 }
 
 nav::before, nav::after {
-content: "";
 position: absolute;
 display: block;
 bottom: 0;
-z-index: -1;
 }
 
 nav::after {
 right: -31px;
-border: 20px solid #fff200;
+border: 20px solid #5b9486;
 border-right-color: transparent;
 }
 
@@ -134,7 +174,7 @@ nav ul {
 nav li {
 	float: left;
 	padding: 5px 0;
-	width: 22%;
+	width: 25%;
 	color: #fff;
 	font-family: 'Antic Slab', sans-serif;
     font-size: 1.5em;      /* 40px/16px = 2.5em */
@@ -142,12 +182,16 @@ nav li {
     text-transform: uppercase;
 }
 
+#banner-logo {
+	display: none;
+}
+
 .winged-up {
 	display: block;
 	float: left;
-	width: 14%;
+	width: 10%;
 	height: 40px;
-	margin-right: 20%;
+	margin-right: 15%;
 	padding: 0;
 }
 
@@ -180,10 +224,6 @@ nav li {
 }
 
 .about p {
-	font-family: 'Vollkorn', serif;
-	font-weight: 400;
-	font-size: 1em;  
-	line-height: 1.5em;
 	color: #eee;
 	}
 
@@ -192,6 +232,15 @@ nav li {
 	width: 31.25%;      /* 300px/960px = .3125 */
 	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
 }
+
+/* LINKS */
+
+.about a:link {color:#fff200;}     
+.about a:visited {color:#fff000;} 
+.about a:hover {color:#fff;}  
+.about a:active {color:#fff;}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
 
 @media screen and (max-width: 1050px) {
 }
@@ -202,7 +251,7 @@ nav li {
 		margin: 0 auto;
 	}
 	
-	header[role="banner"] h1, header[role="banner"] p, nav {
+	header h1, header p, nav {
 		float: none;
 		margin: 0 auto;
 	}

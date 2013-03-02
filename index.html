@@ -16,22 +16,22 @@
 <body>
 <nav>
 	<ul>
-		<li class="winged-up"><a href="http://wingedanddangerous.com/"><img src="img/winged-A.png" alt="winged up" width="90" height="38" /></a></li>
-		<li>Illustration</li>
-		<li>Print and Web</li>
-		<li>About</li>
+		<li class="winged-up"><a id="banner-logo" href="http://wingedanddangerous.com/"><img src="img/winged-A.png" alt="winged up" width="90" height="38" /></a></li>
+		<li><a href="#illustration">Illustration</a></li>
+		<li><a href="#web">Web and Print</a></li>
+		<li><a href="#about">About</a></li>
 	</ul>
 </nav>
 <div class="head-container">
-<header role="banner">
-	<div class="logo"><a href="http://wingedanddangerous.com/"><img src="img/winged-xv.png/" alt="winged" /></a></div>
+<header>
+	<div class="logo"><a href="http://wingedanddangerous.com/"><img src="img/winged-xv.png" alt="winged" /></a></div>
 		<h1>Winged and Dangerous</h1>
-	<p>&raquo;	Graphic designer specializing in illustration and brand management across web and print media. Reach me at elisabeth@wingedanddangerous.com.</p>
+	<p>is Elisabeth Nicula Design. Reach me at elisabeth@wingedanddangerous.com.</p>
 </header>
 </div><!-- end .head-container -->
 <div class="portfolio">
 	<header>
-		<h2>Identity and Illustration</h2>
+		<h2><a id="illustration">Illustration</a></h2>
 	</header>
 	<ul class="folio">
 		<li><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
@@ -42,7 +42,7 @@
 
 <div class="portfolio">
 	<header>
-		<h2>Web and Print</h2>
+		<h2><a id="web">Web and Print</a></h2>
 	</header>
 	<ul class="folio">
 		<li><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
@@ -53,7 +53,7 @@
 <div class="about-container">
 <div class="about">
 	<header>
-		<h2>About</h2>
+		<h2><a id="about">About</a></h2>
 	</header>
 	<div class="about-sect">
 		<img src="img/elisabeth.jpg" alt="" width="200" height="200" />
@@ -61,15 +61,17 @@
 	</div><!-- end .about-sect -->
 	<div class="about-sect">
 		<a href=""><img class="folio" src="img/th-corona.jpg" alt="" width="300" height="200" /></a>
-		<p>Take a look at my fine art over at elisabethnicula.com. It's pretty fine. I make etchings, woodcuts, and paintings that reside in public and private collections THE WORLD OVER.</p>
+		<p>Take a look at my fine art over at <a href="http://elisabethnicula.com">elisabethnicula.com</a>. It's pretty fine. I make etchings, woodcuts, and paintings that reside in at least one public collection and many private ones, including, but not limited to, my mom's.</p>
 	</div><!-- end .about-sect -->
 	<div class="about-sect">
-		<p>Read my personal opinions on my twitter. They're not even my opinions.</p>
+		<p>Read my personal opinions on my <a href="http://twitter.com/wingeddangerous">twitter</a>. They're not even my opinions.</p>
 	</div><!-- end .about-sect -->
 </div><!-- end .about -->
 </div><!-- end .about-container -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/winged.js"></script>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
