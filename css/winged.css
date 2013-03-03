@@ -7,7 +7,6 @@ h1 {
 	font-family: 'Antic Slab', sans-serif;
     font-size: 2.5em;      /* 40px/16px = 2.5em */
     font-weight: 400;
-    text-transform: uppercase;
 }
 
 h2 {
@@ -17,7 +16,15 @@ h2 {
     text-align: center;
 }
 
+h3 {
+	font-family: 'Vollkorn', serif;
+	font-weight: 700; 
+	font-size: 1.5em;
+	margin: 0 auto;
+}
+
 p {
+	display: block;
 	font-family: 'Vollkorn', serif;
 	font-weight: 400;
 	font-size: 1em;  
@@ -74,9 +81,12 @@ nav:after, header:after, .folio:after, .about:after {clear: both;}
 
 .head-container {
 	display: block;
-	width: 100%;
-	margin-bottom: 20px;
+    max-width: 60em;      /* 960px/16px = 60em */ /* width: 100%; without feather */
+	margin: 0 auto;		  /* margin-bottom: 20px; without feather */
+	padding-bottom: 25px; /* needed with feather */
 	z-index: -3;
+	background: url(../img/feather.png) no-repeat center bottom;
+	background-size: cover;
 }
 
 .about-container {
@@ -84,34 +94,39 @@ nav:after, header:after, .folio:after, .about:after {clear: both;}
 	}
 
 header h1 {
-	position: relative;
     max-width: 60em;      /* 960px/16px = 60em */
 	margin: 90px 0 0 0;      /* 10px/960px = .010416667 */
 	text-align: center;
-	color: #000;
+	color: #fff;
 }
-
 /*
-
 h1::before, h1::after {
-position: absolute;
-display: block;
+	position: relative;
+	display: inline-block;
+	content: " ";
+	z-index: -3;
+	top: -6px;
 }
 
 h1::before {
-	left: -31px;
-	background: url(../img/winged-left.png) no-repeat top left;
+	background: url(../img/winged-left.png);
+	height: 30px;
+	width: 40px;
+	left: -6px;
+	
 }
 h1::after {
-	right: 31px;
-	background: url(../img/winged-right.png) no-repeat top left;
+	background: url(../img/winged-right.png);
+	height: 30px;
+	width: 40px;
+	right: -8px;
 }
-
 */
 
 header p {
 	text-align: center;
-	margin: 0;    
+	margin: 0;
+	color: #fff;  
 }
 
 .logo {
@@ -149,21 +164,22 @@ nav {
 	}
 
 nav::before {
-left: -31px;
-border: 20px solid #5b9486;
-border-left-color: transparent;
+	left: -31px;
+	border: 20px solid #5b9486;
+	border-left-color: transparent;
 }
 
 nav::before, nav::after {
-position: absolute;
-display: block;
-bottom: 0;
+	position: absolute;
+	display: block;
+	content: " ";
+	bottom: 0;
 }
 
 nav::after {
-right: -31px;
-border: 20px solid #5b9486;
-border-right-color: transparent;
+	right: -31px;
+	border: 20px solid #5b9486;
+	border-right-color: transparent;
 }
 
 nav ul {
@@ -219,13 +235,9 @@ nav li {
 	height: 100%;
 }
 
-.about h2 {
+.about h2, h3, p {
     color: #eee;
 }
-
-.about p {
-	color: #eee;
-	}
 
 .about-sect {
 	float: left;
