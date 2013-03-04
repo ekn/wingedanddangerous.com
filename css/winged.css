@@ -1,11 +1,19 @@
+/* GENERAL ------------------------------------------ */
+
 body {
 	background: #FFF;
 }
 
+a {text-decoration: none;}
+a:link {color:#fff;}     
+a:visited {color:#fff;} 
+a:hover {color:#fff200;}  
+a:active {color:#fff200;}
+
 h1 {
 	display: block;
 	font-family: 'Antic Slab', sans-serif;
-    font-size: 2.5em;      /* 40px/16px = 2.5em */
+    font-size: 2em;      /* 40px/16px = 2.5em */
     font-weight: 400;
 }
 
@@ -21,6 +29,7 @@ h3 {
 	font-weight: 700; 
 	font-size: 1.5em;
 	margin: 0 auto;
+	color: #000;
 }
 
 p {
@@ -30,6 +39,7 @@ p {
 	font-size: 1em;  
 	line-height: 1.5em;
 	color: #000;
+	margin-top: 0;
 	}
 
 ul {
@@ -43,31 +53,33 @@ li {
 	float: left;
 }
 
-a {text-decoration: none;}
-a:link {color:#fff;}     
-a:visited {color:#fff;} 
-a:hover {color:#fff200;}  
-a:active {color:#fff200;}
+::selection, ::-moz-selection {background-color: #00aeef;}
 
-::selection, ::-moz-selection {
-background-color: #00aeef;
+/* IMAGES ------------------------------------------ */
+
+.thumb img {
+	width: 100%;    
+	height: 100%;
 }
 
-/* CLEAR FIX */
+.set img {
+	width: auto;
+	height: auto;
+}
 
-nav, header, .folio, .about {*zoom: 1;}
-nav:before, nav:after, header:before, header:after,  folio:before, .folio:after, .about:before, .about:after {content: ""; display: table;}
-nav:after, header:after, .folio:after, .about:after {clear: both;}
+/* CLEAR FIX ------------------------------------------ */
 
-/* MARGINS FOR MAIN SECTIONS */
+nav, header, .portfolio, .folio, .about {*zoom: 1;}
+nav:before, nav:after, header:before, header:after, .portfolio:before, .portfolio:after, folio:before, .folio:after, .about:before, .about:after {content: ""; display: table;}
+nav:after, header:after, .portfolio:after, .folio:after, .about:after {clear: both;}
+
+/* POSITIONING ------------------------------------------ */
 
 .portfolio, .about, header {
 	margin: 0 auto;
     padding: 0 0 1em 0;
     max-width: 60em;      /* 960px/16px = 60em */
 }
-
-/* MARGIN-LESS MAIN SECTIONS (HEADER, ABOUT) */
 
 /*.head-container {
 	display: block;
@@ -79,27 +91,45 @@ nav:after, header:after, .folio:after, .about:after {clear: both;}
 	z-index: -3;
 }*/
 
-.head-container {
-	display: block;
-    max-width: 60em;      /* 960px/16px = 60em */ /* width: 100%; without feather */
-	margin: 0 auto;		  /* margin-bottom: 20px; without feather */
-	padding-bottom: 25px; /* needed with feather */
-	z-index: -3;
-	background: url(../img/feather.png) no-repeat center bottom;
-	background-size: cover;
+.folio {
+	padding: 0;
 }
+
+.folio li {
+	float: left;
+	width: 31.25%;      /* 300px/960px = .3125 */
+	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
+}
+
+.masthead-container {
+	width: 100%;
+	background: #ccc;
+	}
 
 .about-container {
 	background: #ff1100;
 	}
 
-header h1 {
-    max-width: 60em;      /* 960px/16px = 60em */
+.about-sect {
+	float: left;
+	width: 31.25%;      /* 300px/960px = .3125 */
+	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
+}
+
+/* ADDITIONAL TEXT STYLES ------------------------------------------ */
+
+.masthead h1 {
+    width: 100%;
+    height: 161px;
 	margin: 90px 0 0 0;      /* 10px/960px = .010416667 */
+	padding-bottom: 30px;
 	text-align: center;
 	color: #fff;
+	background: url(../img/feather.png) no-repeat center top;
+	background-size: contain;
 }
-/*
+
+/* FEATHERS ON EITHER SIDE OF MAIN H1
 h1::before, h1::after {
 	position: relative;
 	display: inline-block;
@@ -123,11 +153,15 @@ h1::after {
 }
 */
 
-header p {
-	text-align: center;
-	margin: 0;
-	color: #fff;  
+.portfolio h2 {
+	color: #ff1100;
 }
+
+.about h2, h3, p {
+    color: #eee;
+}
+
+/*  SITE LOGO AND MAIN NAV ------------------------------------------ */
 
 .logo {
 	display: block;
@@ -152,8 +186,6 @@ header p {
 .logo a:hover {
 	background-position: 0 -70px;
 	}
-
-/* MAIN NAV */
 	
 nav {
 	position: fixed;
@@ -198,7 +230,7 @@ nav li {
     text-transform: uppercase;
 }
 
-#banner-logo {
+#nav-logo {
 	display: none;
 }
 
@@ -211,48 +243,35 @@ nav li {
 	padding: 0;
 }
 
-.winged-up img {
-	width: auto;
-	height: auto;
-}
-
-.portfolio h2 {
-	color: #ff1100;
-}
-
-.folio {
-	padding: 0;
-}
-
-.folio li {
-	float: left;
-	width: 31.25%;      /* 300px/960px = .3125 */
-	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
-}
-
-.folio img {
-	width: 100%;    
-	height: 100%;
-}
-
-.about h2, h3, p {
-    color: #eee;
-}
-
-.about-sect {
-	float: left;
-	width: 31.25%;      /* 300px/960px = .3125 */
-	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
-}
-
-/* LINKS */
+/* LINKS ------------------------------------------ */
 
 .about a:link {color:#fff200;}     
 .about a:visited {color:#fff000;} 
 .about a:hover {color:#fff;}  
 .about a:active {color:#fff;}
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* PROJECT PAGES ------------------------------------------ */
+
+.project-head h1 {
+	display: none;
+}
+
+.sidebar {
+	display: block;
+	float: left;
+	width: 31.25%;     /* 300px/960px = .3125 */
+	margin: 0 01.0416667%;      /* 10px/960px = .010416667 */
+}
+
+.project-content {
+	display: block;
+	float: right;
+	width: 64.583333%;     /* 620px/960px = .64583333 */
+	margin: 0 01.0416667%;      /* 10px/960px = .010416667 */
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS ------------------------------------------ */
 
 @media screen and (max-width: 1050px) {
 }
@@ -284,31 +303,6 @@ nav li {
 }
 
 /* 
-    font-family: Helvetica, sans-serif;
-    font-size: 0.875em;      14px / 16px = 0.875em
-
-.container-1 {
-	float: left;
-	width: 22.916667%;      220px / 960px = .22916667
-	margin: auto 01.0416667%;      10px / 960px = .010416667
-	background: #acacac;
-	height: 300px;
-	}
-
-.container-2 {
-	float: right;
-	width: 72.916667%;      700px / 960px = .72916667
-	margin: auto 01.0416667%;      10px / 960px = .010416667
-	background: aqua;
-	height: 300px;
-
-flexible grids
-flexible images and media 
-css media queries
-
-::-moz-selection,
-::selection {
-  background: #dfa054;
 
 .alpha:first-letter,
 .bravo:first-line {
