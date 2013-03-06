@@ -13,7 +13,7 @@ a:active {color:#fff200;}
 h1 {
 	display: block;
 	font-family: 'Antic Slab', sans-serif;
-    font-size: 2em;      /* 40px/16px = 2.5em */
+    font-size: 1.5em;      /* 40px/16px = 2.5em */
     font-weight: 400;
 }
 
@@ -22,14 +22,15 @@ h2 {
     font-weight: 400;    
     font-size: 3em;      /* 40px/16px = 2.5em */
     text-align: center;
+    margin: 20px auto;
 }
 
 h3 {
 	font-family: 'Vollkorn', serif;
 	font-weight: 700; 
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin: 0 auto;
-	color: #000;
+	color: #333;
 }
 
 p {
@@ -38,7 +39,7 @@ p {
 	font-weight: 400;
 	font-size: 1em;  
 	line-height: 1.5em;
-	color: #000;
+	color: #333;
 	margin-top: 0;
 	}
 
@@ -56,11 +57,6 @@ li {
 ::selection, ::-moz-selection {background-color: #00aeef;}
 
 /* IMAGES ------------------------------------------ */
-
-.thumb img {
-	width: 100%;    
-	height: 100%;
-}
 
 .set img {
 	width: auto;
@@ -96,14 +92,18 @@ nav:after, header:after, .portfolio:after, .folio:after, .about:after {clear: bo
 }
 
 .folio li {
-	float: left;
 	width: 31.25%;      /* 300px/960px = .3125 */
 	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
 }
 
+.folio img {
+	width: 100%;    
+	height: 100%;
+}
+
 .masthead-container {
 	width: 100%;
-	background: #ccc;
+	background: #FFF;
 	}
 
 .about-container {
@@ -122,9 +122,10 @@ nav:after, header:after, .portfolio:after, .folio:after, .about:after {clear: bo
     width: 100%;
     height: 161px;
 	margin: 90px 0 0 0;      /* 10px/960px = .010416667 */
-	padding-bottom: 30px;
-	text-align: center;
-	color: #fff;
+	padding: 15px 0 30px 15px;
+	text-align: left;
+	line-height: 1.3em;
+	color: #666;
 	background: url(../img/feather.png) no-repeat center top;
 	background-size: contain;
 }
@@ -157,7 +158,7 @@ h1::after {
 	color: #ff1100;
 }
 
-.about h2, h3, p {
+.about h2, .about h3, .about p {
     color: #eee;
 }
 
@@ -216,18 +217,19 @@ nav::after {
 
 nav ul {
     max-width: 60em;      /* 960px/16px = 60em */
-	margin: auto;
+	margin: 0 auto;
+	padding: 0 auto;
 }
 
 nav li {
-	float: left;
-	padding: 5px 0;
+	padding: 7px 0;
 	width: 25%;
 	color: #fff;
 	font-family: 'Antic Slab', sans-serif;
-    font-size: 1.5em;      /* 40px/16px = 2.5em */
+    font-size: 1.3em;
     font-weight: 400;
     text-transform: uppercase;
+    text-align: right;
 }
 
 #nav-logo {
@@ -239,7 +241,7 @@ nav li {
 	float: left;
 	width: 10%;
 	height: 40px;
-	margin-right: 15%;
+	margin: 0 15% 0 0;
 	padding: 0;
 }
 
@@ -249,6 +251,10 @@ nav li {
 .about a:visited {color:#fff000;} 
 .about a:hover {color:#fff;}  
 .about a:active {color:#fff;}
+
+header h2 a {
+	padding-top: 70px;
+}
 
 
 /* PROJECT PAGES ------------------------------------------ */
@@ -264,11 +270,34 @@ nav li {
 	margin: 0 01.0416667%;      /* 10px/960px = .010416667 */
 }
 
+.sidebar ul {
+	padding-left: 0;
+}
+
+.sidebar li {
+	float: none;
+	font-family: 'Vollkorn', serif;
+	font-weight: 400;
+	font-size: 1em;  
+	line-height: 1.5em;
+	color: #000;
+}
+
+.sidebar a:link {color:#5b9486;}     
+.sidebar a:visited {color:#5b9486;} 
+.sidebar a:hover {color:#fff200;}  
+.sidebar a:active {color:#fff200;}
+
 .project-content {
 	display: block;
 	float: right;
-	width: 64.583333%;     /* 620px/960px = .64583333 */
-	margin: 0 01.0416667%;      /* 10px/960px = .010416667 */
+	width: 56.25%;     /* 540px/960px = .5625 */
+	margin: 0 01.0416667% 0 9.375%;      /* 10px/960px = .010416667 , 90px/960px =0.09375 */
+}
+
+.project-content img {
+	width: 100%;    
+	height: 100%;
 }
 
 /* MEDIA QUERIES FOR RESPONSIVENESS ------------------------------------------ */

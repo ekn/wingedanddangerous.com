@@ -301,13 +301,14 @@ dd {
 
 /**
  * Address paddings set differently in IE 6/7.
- */
 
 menu,
 ol,
 ul {
     padding: 0 0 0 40px;
 }
+
+*/
 
 /**
  * Correct list images handled incorrectly in IE 7.
