@@ -40,7 +40,7 @@ p {
 	font-size: 1em;  
 	line-height: 1.5em;
 	color: #333;
-	margin-top: 0;
+	margin-top: 10px;
 	}
 
 ul {
@@ -58,9 +58,16 @@ li {
 
 /* IMAGES ------------------------------------------ */
 
-.set img {
+.about-sect img {
+	width: 100%;
+	height: 100%;
+}
+
+.about-sect .set {
 	width: auto;
 	height: auto;
+	float: left;
+	margin: 0 10px 10px 0;
 }
 
 /* CLEAR FIX ------------------------------------------ */
@@ -108,6 +115,7 @@ nav:after, header:after, .portfolio:after, .folio:after, .about:after {clear: bo
 
 .about-container {
 	background: #ff1100;
+	padding-bottom: 250px;
 	}
 
 .about-sect {
@@ -121,7 +129,7 @@ nav:after, header:after, .portfolio:after, .folio:after, .about:after {clear: bo
 .masthead h1 {
     width: 100%;
     height: 161px;
-	margin: 90px 0 0 0;      /* 10px/960px = .010416667 */
+	margin: 50px 0 30px 0;      /* 10px/960px = .010416667 */
 	padding: 15px 0 30px 15px;
 	text-align: left;
 	line-height: 1.3em;
@@ -129,30 +137,6 @@ nav:after, header:after, .portfolio:after, .folio:after, .about:after {clear: bo
 	background: url(../img/feather.png) no-repeat center top;
 	background-size: contain;
 }
-
-/* FEATHERS ON EITHER SIDE OF MAIN H1
-h1::before, h1::after {
-	position: relative;
-	display: inline-block;
-	content: " ";
-	z-index: -3;
-	top: -6px;
-}
-
-h1::before {
-	background: url(../img/winged-left.png);
-	height: 30px;
-	width: 40px;
-	left: -6px;
-	
-}
-h1::after {
-	background: url(../img/winged-right.png);
-	height: 30px;
-	width: 40px;
-	right: -8px;
-}
-*/
 
 .portfolio h2 {
 	color: #ff1100;
@@ -162,14 +146,14 @@ h1::after {
     color: #eee;
 }
 
-/*  SITE LOGO AND MAIN NAV ------------------------------------------ */
+/*  SITE LOGO ------------------------------------------ */
 
 .logo {
 	display: block;
 	position: relative;
 	z-index: 40;
-	float: left;
 	width: 161px;
+	margin: 0 auto;
 	padding: 2px 0;
 }
 
@@ -177,7 +161,7 @@ h1::after {
 	display: block;	
 	width: 161px;
 	height: 70px;
-	background: url(../img/winged-xv.png) no-repeat top left;
+	background: url(../img/winged-xv.png);
 	}
 	
 .logo img {
@@ -188,6 +172,8 @@ h1::after {
 	background-position: 0 -70px;
 	}
 	
+/* MAIN NAV ------------------------------------------ */
+
 nav {
 	position: fixed;
     width: 90%;
@@ -207,6 +193,7 @@ nav::before, nav::after {
 	display: block;
 	content: " ";
 	bottom: 0;
+	z-index: -10;
 }
 
 nav::after {
@@ -216,34 +203,57 @@ nav::after {
 }
 
 nav ul {
-    max-width: 60em;      /* 960px/16px = 60em */
+    max-width: 60em;      /* 960px/16px = 60em  */
 	margin: 0 auto;
-	padding: 0 auto;
+	padding-left: 0;
 }
 
 nav li {
-	padding: 7px 0;
-	width: 25%;
+	width: 19%;
+	padding: 8px 0;
 	color: #fff;
 	font-family: 'Antic Slab', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 400;
     text-transform: uppercase;
-    text-align: right;
+}
+
+.nav-left {
+	text-align: left;	
+}
+
+.nav-right {
+	float: right;
+	text-align: right;
 }
 
 #nav-logo {
 	display: none;
 }
 
-.winged-up {
+.nav-logo {
 	display: block;
-	float: left;
+	z-index: 10;
 	width: 10%;
-	height: 40px;
-	margin: 0 15% 0 0;
+	margin: 0 7% 2px 7%;
 	padding: 0;
+	font-size: 2em;
 }
+
+.nav-logo a {
+	width: 90px;
+	height: 38px;
+	background: url(../img/winged-A.png);
+	}
+		
+.nav-logo a:hover {
+	background-position: 0 -38px;
+	}
+
+.nav-logo img {
+	height: 0;
+	}
+
 
 /* LINKS ------------------------------------------ */
 
@@ -256,6 +266,17 @@ header h2 a {
 	padding-top: 70px;
 }
 
+.about h3 a {
+	padding-top: 65px;
+}
+
+.portfolio h2 a:hover {
+	color: #ff1100;
+}
+
+.about h2 a:hover, .about h3 a:hover {
+    color: #eee;
+}
 
 /* PROJECT PAGES ------------------------------------------ */
 
@@ -266,12 +287,13 @@ header h2 a {
 .sidebar {
 	display: block;
 	float: left;
-	width: 31.25%;     /* 300px/960px = .3125 */
-	margin: 0 01.0416667%;      /* 10px/960px = .010416667 */
+	width: 30%;     /* 300px/960px = .3125 (.0125 added to left margin below) */
+	margin: 0 01.0416667% 0 2.2916667%;      /* 10px/960px = .010416667 */
 }
 
 .sidebar ul {
 	padding-left: 0;
+	margin-top: 10px;
 }
 
 .sidebar li {
@@ -292,7 +314,7 @@ header h2 a {
 	display: block;
 	float: right;
 	width: 56.25%;     /* 540px/960px = .5625 */
-	margin: 0 01.0416667% 0 9.375%;      /* 10px/960px = .010416667 , 90px/960px =0.09375 */
+	margin: 0 5.20833335%;      /* 10px/960px = .010416667 , 90px/960px =0.09375 OR .010416667 + .09375 / 2 = .0520833335 */
 }
 
 .project-content img {
@@ -305,22 +327,33 @@ header h2 a {
 @media screen and (max-width: 1050px) {
 }
 
-@media screen and (max-width: 800px) {
-	.logo {
-		float: none;
-		margin: 0 auto;
-	}
-	
-	header h1, header p, nav {
-		float: none;
-		margin: 0 auto;
-	}
-		
+@media screen and (max-width: 800px) {	
 	.folio li {
 		float: left;
 		width: 44%;
 		margin: 0 3% 20px;  
 	}
+	
+    nav li {
+        padding: 5px auto;
+    	font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 700px) {	
+    
+	nav {
+	    max-width: 40%;
+	    height: auto;
+		margin: 15px 30% 0 30%;
+	}
+		
+	nav li, .nav-left, .nav-right {
+    	float: none;
+    	width: 100%;
+    	text-align: center;
+    	padding: 0;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -331,11 +364,3 @@ header h2 a {
 	}
 }
 
-/* 
-
-.alpha:first-letter,
-.bravo:first-line {
-  color: #dfa054;
-  font-size: 18px;
-}
-*/
