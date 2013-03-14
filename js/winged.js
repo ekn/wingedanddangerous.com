@@ -1,3 +1,9 @@
-$(window).scroll(function() {
-  $('#nav-logo').toggle($(window).scrollTop() >= 158);
-});
+maybeShowLogo = function() {
+    var w = $(window);
+	$("#nav-logo").toggle((w.scrollTop() >= 158) && (w.width() > 778));
+}
+
+$(window).scroll(maybeShowLogo);
+$(window).resize(maybeShowLogo);
+
+maybeShowLogo();
