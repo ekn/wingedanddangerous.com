@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -14,30 +16,23 @@
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Antic Slab|Vollkorn">
 </head>
 <body>
-<nav>
-	<ul>
-		<li class="nav-left"><a href="#illustration">Illustration</a></li>
-		<li class="nav-left"><a href="#web">Web &amp; Print</a></li>
-		<li class="nav-logo"><a id="nav-logo" href="http://wingedanddangerous.com/"><img src="img/winged-A.png" alt="winged icon" width="90" height="38" /></a></li>
-		<li class="nav-right"><a href="#contact">Contact</a></li>
-		<li class="nav-right"><a href="#about">About</a></li>
-	</ul>
-</nav>
+{% include nav.html %}
 <div class="masthead-container">
-<header class="masthead">
-	<div class="logo"><a href="http://wingedanddangerous.com/"><img src="img/winged-xv.png" alt="winged" /></a></div>
-	<h1>Winged and Dangerous<br />is Elisabeth Nicula design.</h1>
-</header>
+	<header class="masthead">
+		<div class="logo"><a id="top"><img src="img/winged-xv.png" alt="winged" /></a></div>
+		<h1>Winged and Dangerous<br />is Elisabeth Nicula design.</h1>
+	</header>
 </div><!-- end .masthead-container -->
 <div class="portfolio">
 	<header>
 		<h2><a id="illustration">Illustration</a></h2>
 	</header>
 	<ul class="folio">
-		<li><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
-		<li><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
-		<li><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
+		<li><h3>Project Title</h3><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
+		<li><h3>Project Title</h3><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
+		<li><h3>Project Title</h3><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
 	</ul>
+	<p>Other projects include <a href="">yadda</a>.</p>
 </div><!-- end .portfolio -->
 
 <div class="portfolio">
@@ -45,34 +40,34 @@
 		<h2><a id="web">Web &amp; Print</a></h2>
 	</header>
 	<ul class="folio">
-		<li><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
-		<li><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
-		<li><a href=""><img src="img/th-xmas2012.jpg" alt="jupiter christmas card" width="300" height="200" /></a></li>
+		<li><h3>Project Title</h3><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
+		<li><h3>Project Title</h3><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
+		<li><h3>Christmas <em>in Space</em></h3><a href=""><img src="img/th-xmas2012.jpg" alt="jupiter christmas card" width="300" height="200" /></a></li>
 	</ul>
 	<p>Other projects include yadda.</p>
 </div><!-- end .portfolio -->
 
 <div class="about-container">
-<div class="about">
-	<header>
-		<h2><a id="about">About</a></h2>
-	</header>
-	<div class="about-sect">
-		<h3>Elisabeth Nicula</h3>
-		<p><img class="set" src="img/elisabeth.jpg" alt="elisabeth with robot head" width="125" height="125" />I'm a graphic designer specializing in illustration and brand management across web and print media. My current gig is at Berklee College of Music. I like clean, confident design, riding my bicycle, and looking at things through binoculars.</p>
-	</div><!-- end .about-sect -->
-	<div class="about-sect">
-		<a href="http://elisabethnicula.com"><img src="img/th-corona.jpg" alt="" width="300" height="200" /></a>
-		<p>Take a look at my fine art over at <a href="http://elisabethnicula.com">elisabethnicula.com</a>. It's fine. I make etchings, woodcuts, and paintings that reside in at least one public collection and many private ones.</p>
-	</div><!-- end .about-sect -->
-	<div class="about-sect full-contact">
-		<h3><a id="contact">Contact</a></h3>
-		<p>I may be available to make your illustration, website, logo, brand, or printed matter. Drop me a line at elisabeth@wingedanddangerous.com.</p>
-		<p>Read my personal opinions on my <a href="http://twitter.com/wingeddangerous">twitter</a>.</p>
-	</div><!-- end .about-sect -->
-</div><!-- end .about -->
+	<div class="about">
+		<header>
+			<h2><a id="about">About</a></h2>
+		</header>
+		<div class="about-sect">
+			<h3>Elisabeth Nicula</h3>
+			<p><img class="set" src="img/elisabeth.jpg" alt="elisabeth with robot head" width="125" height="125" />I'm a graphic designer specializing in illustration and brand management across web and print media. My current gig is at Berklee College of Music. I like clean, confident design, breakfast, and looking at things through binoculars.</p>
+		</div><!-- end .about-sect -->
+		<div class="about-sect">
+			<h3>Art</h3>
+			<p><a href="http://elisabethnicula.com"><img src="img/th-corona.jpg" alt="" width="300" height="200" /></a><br />Take a look at my fine art over at <a href="http://elisabethnicula.com">elisabethnicula.com</a>. It's fine. I make etchings, woodcuts, and paintings that reside in at least one public collection and many private ones. <em>Dig Boston</em> recently <a href="http://digboston.com/think/2013/03/black-ink-nave-gallery-annex/">featured</a> my bitty woodcut <em>Wish You Were Here</em>.</p>
+		</div><!-- end .about-sect -->
+		<div class="about-sect full-contact">
+			<h3><a id="contact">Contact</a></h3>
+			<p>Would you like me to make your illustration, website, logo, brand, or printed matter? Drop me a line at elisabeth@wingedanddangerous.com.</p>
+			<p>Read my deep thoughts on <a href="http://twitter.com/wingeddangerous">twitter</a>.</p>
+		</div><!-- end .about-sect full-contact -->
+	</div><!-- end .about -->
+	<footer><p>Copyright &copy; 2013 Elisabeth Nicula.<br />Design, imagery, and code by me.</p></footer>
 </div><!-- end .about-container -->
-
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

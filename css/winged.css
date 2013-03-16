@@ -4,11 +4,10 @@ body {
 	background: #FFF;
 }
 
-a {text-decoration: none;}
-a:link {color:#fff;}     
-a:visited {color:#fff;} 
-a:hover {color:#fff200;}  
-a:active {color:#fff200;}
+a:link {color:#5b9486; text-decoration: underline;}     
+a:visited {color:#5b9486; text-decoration: none;} 
+a:hover {color:#fff200; text-decoration: none;}  
+a:active {color:#fff200;text-decoration: none;}
 
 h1 {
 	display: block;
@@ -30,7 +29,7 @@ h3 {
 	font-weight: 700; 
 	font-size: 1.2em;
 	margin: 0 auto;
-	color: #333;
+	color: #555;
 }
 
 p {
@@ -39,8 +38,7 @@ p {
 	font-weight: 400;
 	font-size: 1em;  
 	line-height: 1.5em;
-	color: #333;
-	margin-top: 10px;
+	color: #555;
 	}
 
 ul {
@@ -55,20 +53,6 @@ li {
 }
 
 ::selection, ::-moz-selection {background-color: #00aeef;}
-
-/* IMAGES ------------------------------------------ */
-
-.about-sect img {
-	width: 100%;
-	height: 100%;
-}
-
-.about-sect .set {
-	width: auto;
-	height: auto;
-	float: left;
-	margin: 0 10px 10px 0;
-}
 
 /* CLEAR FIX ------------------------------------------ */
 
@@ -104,7 +88,7 @@ nav:after, header:after, .portfolio:after, .folio:after, .about:after {clear: bo
 
 .about-container {
 	background: #ff1100;
-	padding-bottom: 250px;
+	padding-bottom: 150px;
 	}
 
 .about-sect {
@@ -113,54 +97,49 @@ nav:after, header:after, .portfolio:after, .folio:after, .about:after {clear: bo
 	margin: 0 01.0416667% 20px;      /* 10px/960px = .010416667 */
 }
 
-/* ADDITIONAL TEXT STYLES ------------------------------------------ */
-
-.masthead h1 {
-    width: 100%;
-    height: 161px;
-	margin: 30px 0 30px 0;      /* 10px/960px = .010416667 */
-	padding: 15px 0 30px 15px;
-	text-align: left;
-	line-height: 1.3em;
-	color: #666;
-	background: url(../img/feather.png) no-repeat center top;
-	background-size: contain;
+.about-sect img {
+	width: 100%;
+	height: 100%;
 }
 
-.portfolio h2 {
-	color: #ff1100;
+.about-sect .set {
+	width: auto;
+	height: auto;
+	float: left;
+	margin: 0 10px 10px 0;
 }
 
-.about h2, .about h3, .about p {
-    color: #eee;
-}
-
-/*  SITE LOGO ------------------------------------------ */
-
-.logo {
-	display: block;
+footer {
 	position: relative;
-	z-index: 40;
-	width: 161px;
-	margin: 0 auto;
-	padding: 2px 0;
+    width: 56%;
+    height: 41px;
+	background-color: #ff6666;
+	z-index: 1;
+	margin: 60px 22% 20px;
+	padding: 0;
+	}
+
+footer::before {
+	left: -31px;
+	border: 20px solid #ff6666;
+	border-left-color: transparent;
 }
 
-.logo a {
-	display: block;	
-	width: 161px;
-	height: 70px;
-	background: url(../img/winged-xv.png);
-	}
-	
-.logo img {
-	height: 0;
-	}
-	
-.logo a:hover {
-	background-position: 0 -70px;
-	}
-	
+footer::before, footer::after {
+	position: absolute;
+	display: block;
+	content: " ";
+	top: 0;
+	bottom: 0;
+	z-index: -3;
+}
+
+footer::after {
+	right: -31px;
+	border: 20px solid #ff6666;
+	border-right-color: transparent;
+}
+
 /* MAIN NAV ------------------------------------------ */
 
 nav {
@@ -245,48 +224,21 @@ nav li {
 	height: 0;
 	}
 
-/* LINKS ------------------------------------------ */
-
-.about a:link {color:#fff200;}     
-.about a:visited {color:#fff000;} 
-.about a:hover {color:#fff;}  
-.about a:active {color:#fff;}
-
-header h2 a {
-	padding-top: 70px;
-}
-
-.about h3 a {
-	padding-top: 65px;
-}
-
-.portfolio h2 a:hover {
-	color: #ff1100;
-}
-
-.about h2 a:hover, .about h3 a:hover {
-    color: #eee;
-}
-
 /* PROJECT PAGES ------------------------------------------ */
 
-.project-head h1 {
-	display: none;
-}
-
-.sidebar {
+.sidebar-nav, .sidebar-about {
 	display: block;
 	float: left;
 	width: 30%;     /* 300px/960px = .3125 (.0125 added to left margin below) */
 	margin: 0 01.0416667% 0 2.2916667%;      /* 10px/960px = .010416667 */
 }
 
-.sidebar ul {
+.sidebar-nav ul {
 	padding-left: 0;
 	margin-top: 10px;
 }
 
-.sidebar li {
+.sidebar-nav li {
 	float: none;
 	font-family: 'Vollkorn', serif;
 	font-weight: 400;
@@ -294,11 +246,6 @@ header h2 a {
 	line-height: 1.5em;
 	color: #000;
 }
-
-.sidebar a:link {color:#5b9486;}     
-.sidebar a:visited {color:#5b9486;} 
-.sidebar a:hover {color:#fff200;}  
-.sidebar a:active {color:#fff200;}
 
 .project-content {
 	display: block;
@@ -312,12 +259,119 @@ header h2 a {
 	height: 100%;
 }
 
+/* ADDITIONAL TEXT STYLES ------------------------------------------ */
+
+.masthead h1 {
+    width: 100%;
+    height: 161px;
+	margin: 30px 0 30px 0;      /* 10px/960px = .010416667 */
+	padding: 15px 0 30px 15px;
+	text-align: left;
+	line-height: 1.3em;
+	color: #666;
+	background: url(../img/feather.png) no-repeat center top;
+	background-size: contain;
+}
+
+.project-head h1 {
+	display: none;
+}
+
+.portfolio h2 {
+	color: #ff1100;
+}
+
+.folio h3 {
+	font-size: 1.1em;
+	margin: 0 auto 5px;
+	text-align: center;
+}
+
+.about h2, .about h3, .about p {
+    color: #eee;
+}
+
+.portfolio p {
+	margin: 0 01.0416667% 10px;      /* 10px/960px = .010416667 */
+}
+
+.project-content p {
+	margin: 10px 0 25px 0;
+}
+
+.sidebar-about p {
+	margin: 10px 0;
+}
+
+footer p {
+	color: #eee;
+	font-size: .8em;
+	line-height: 1em;
+	padding: 10px 0;
+	text-align: center;
+}
+
+/*  SITE LOGO ------------------------------------------ */
+
+.logo {
+	display: block;
+	position: relative;
+	z-index: 40;
+	width: 161px;
+	margin: 0 auto;
+	padding: 2px 0;
+}
+
+.logo a {
+	display: block;	
+	width: 161px;
+	height: 70px;
+	background: url(../img/winged-xv.png);
+	}
+	
+.logo img {
+	height: 0;
+	}
+	
+.logo a:hover {
+	background-position: 0 -70px;
+	}
+	
+/* ADDITIONAL LINKS ------------------------------------------ */
+
+nav a:link {color:#fff; text-decoration: none;}     
+nav a:visited {color:#fff;} 
+nav a:hover {color:#fff200;}  
+nav a:active {color:#fff200;}
+
+.about a:link {color:#fff200; text-decoration: none;}     
+.about a:visited {color:#fff000;} 
+.about a:hover {color:#fff; }  
+.about a:active {color:#fff;}
+
+.about h2 a:hover, .about h3 a:hover {
+    color: #eee;
+}
+
+.about h3 a {
+	padding-top: 65px;
+}
+
+header h2 a {
+	padding-top: 70px;
+}
+
+.portfolio h2 a:hover {
+	color: #ff1100;
+}
+
 /* MEDIA QUERIES FOR RESPONSIVENESS ------------------------------------------ */
 
 @media screen and (max-width: 1050px) {
 }
 
 @media screen and (max-width: 800px) {	
+
 	.folio li {
 		float: left;
 		width: 44%;
@@ -391,11 +445,17 @@ header h2 a {
 		font-size: 1.2em;
 		background: url(../img/feather.png) no-repeat right bottom;
 		background-size: contain;
-		
+	}
+	
+	.sidebar-about, .sidebar-nav, .project-content {
+		float: none;
+		width: 93.75%;      /* 900px/960px = .9375 */
+		margin: 0 3.125% 30px;       /* 30px/960px = .03125 */
 	}
 }
 
 @media screen and (max-width: 500px) {
+
 	nav {
 		display: none;
 	}
@@ -431,12 +491,5 @@ header h2 a {
 	.about-sect img {
 		max-width: 80%;
 	}
-	
-	.sidebar, .project-content {
-		float: none;
-		width: 93.75%;      /* 900px/960px = .9375 */
-		margin: 0 3.125% 30px;       /* 30px/960px = .03125 */
-	}
-
-	}
+}
 
