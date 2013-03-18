@@ -26,7 +26,7 @@ h2 {
 
 h3 {
 	font-family: 'Vollkorn', serif;
-	font-weight: 700; 
+	font-weight: 400; 
 	font-size: 1.2em;
 	margin: 0 auto;
 	color: #555;
@@ -297,6 +297,7 @@ nav li {
 
 .project-content p {
 	margin: 10px 0 25px 0;
+	text-align: center;
 }
 
 .sidebar-about p {
