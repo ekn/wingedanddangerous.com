@@ -3,17 +3,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Winged and Dangerous is Elisabeth Nicula Design</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/winged.css">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Antic Slab|Vollkorn:400">
+<title>Winged and Dangerous is Elisabeth Nicula Design</title>
+{% include meta-link.html %}
 </head>
 <body>
-{% include nav.html %}
+<nav>
+	<ul>
+		<li class="nav-left"><a href="#illustration">Illustration</a></li>
+		<li class="nav-left"><a href="#web">Web &amp; Print</a></li>
+		<li class="nav-logo"><a id="nav-logo" href="#top"><img src="{{ site.baseurl }}/img/winged-A.png" alt="winged icon" width="90" height="38" /></a></li>
+		<li class="nav-right"><a href="#contact">Contact</a></li>
+		<li class="nav-right"><a href="#about">About</a></li>
+	</ul>
+</nav>
 <div class="masthead-container">
 	<header class="masthead">
 		<div class="logo"><a id="top"><img src="img/winged-xv.png" alt="winged" /></a></div>
@@ -25,9 +27,9 @@
 		<h2><a id="illustration">Illustration</a></h2>
 	</header>
 	<ul class="folio">
-		<li><h3>Berklee Iconography</h3><a href="{{ baseurl }}/projects/berklee-icons.html"><img src="{{ baseurl }}/img/th-berkicons.png" alt="berklee social icons" width="300" height="200" /></a></li>
-		<li><h3>Berklee Mobile</h3><a href="{{ baseurl }}/projects/berklee-apps.html"><img src="{{ baseurl }}/img/th-berkapp.png" alt="berklee app" width="300" height="200" /></a></li>
-		<li><h3>Project Title</h3><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
+		<li><h3>Berklee Iconography</h3><a href="{{ site.baseurl }}/projects/berklee-icons.html"><img src="{{ site.baseurl }}/img/th-berkicons.png" alt="berklee social icons" width="300" height="200" /></a></li>
+		<li><h3>BerkleeMobile</h3><a href="{{ site.baseurl }}/projects/berklee-apps.html"><img src="{{ site.baseurl }}/img/th-berkapp.png" alt="berklee app" width="300" height="200" /></a></li>
+		<li><h3>Map of Boston</h3><a href="{{ site.baseurl }}/projects/map.html"><img src="{{ site.baseurl }}/img/th-map.png" alt="berklee map" width="300" height="200" /></a></li>
 	</ul>
 	<p>Other projects include <a href="">yadda</a>.</p>
 </div><!-- end .portfolio -->
@@ -36,9 +38,9 @@
 		<h2><a id="web">Web &amp; Print</a></h2>
 	</header>
 	<ul class="folio">
-		<li><h3>Project Title</h3><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
-		<li><h3>Project Title</h3><a href=""><img src="http://placehold.it/300x200" alt="" width="300" height="200" /></a></li>
-		<li><h3>Christmas <em>in Space</em></h3><a href="{{ baseurl }}/projects/xmas.html"><img src="{{ baseurl }}/img/th-xmas2012.jpg" alt="jupiter christmas card" width="300" height="200" /></a></li>
+		<li><h3>Fundraising Cards</h3><a href="{{ site.baseurl }}/projects/fundraising-cards.html"><img src="{{ site.baseurl }}/img/th-cards.jpg" alt="cards" width="300" height="200" /></a></li>
+		<li><h3>Production Projects</h3><a href="{{ site.baseurl }}/projects/production-projects.html"><img src="{{ site.baseurl }}/img/th-berkcds.jpg" alt="" width="300" height="200" /></a></li>
+		<li><h3>Christmas <em>in Space</em></h3><a href="{{ site.baseurl }}/projects/xmas.html"><img src="{{ site.baseurl }}/img/th-xmas2012.jpg" alt="jupiter christmas card" width="300" height="200" /></a></li>
 	</ul>
 	<p>Other projects include yadda.</p>
 </div><!-- end .portfolio -->

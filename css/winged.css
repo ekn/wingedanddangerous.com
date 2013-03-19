@@ -1,3 +1,5 @@
+---
+---
 /* GENERAL ------------------------------------------ */
 
 body {
@@ -115,7 +117,7 @@ footer {
     height: 41px;
 	background-color: #ff6666;
 	z-index: 1;
-	margin: 60px 22% 20px;
+	margin: 100px 22% 0;
 	padding: 0;
 	}
 
@@ -213,7 +215,7 @@ nav li {
 .nav-logo a {
 	width: 90px;
 	height: 38px;
-	background: url(../img/winged-A.png);
+	background: url({{ site.baseurl }}/img/winged-A.png);
 	}
 		
 .nav-logo a:hover {
@@ -269,7 +271,7 @@ nav li {
 	text-align: left;
 	line-height: 1.3em;
 	color: #666;
-	background: url(../img/feather.png) no-repeat center top;
+	background: url({{ site.baseurl }}/img/feather.png) no-repeat center top;
 	background-size: contain;
 }
 
@@ -494,3 +496,4 @@ header h2 a {
 	}
 }
 
+/* NOTE: outline (image) gray is #d7d7d7 */
