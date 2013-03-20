@@ -4,6 +4,7 @@
 
 body {
 	background: #FFF;
+	color: #555;
 }
 
 a:link {color:#5b9486; text-decoration: underline;}     
@@ -31,7 +32,6 @@ h3 {
 	font-weight: 400; 
 	font-size: 1.2em;
 	margin: 0 auto;
-	color: #555;
 }
 
 p {
@@ -40,7 +40,6 @@ p {
 	font-weight: 400;
 	font-size: 1em;  
 	line-height: 1.5em;
-	color: #555;
 	}
 
 ul {
@@ -271,7 +270,7 @@ nav li {
 	text-align: left;
 	line-height: 1.3em;
 	color: #666;
-	background: url({{ site.baseurl }}/img/feather.png) no-repeat center top;
+	background: url({{ site.baseurl }}/img/feather.jpg) no-repeat center top;
 	background-size: contain;
 }
 
@@ -360,6 +359,8 @@ nav a:active {color:#fff200;}
 	padding-top: 65px;
 }
 
+.folio li a {text-decoration: none;}     
+
 header h2 a {
 	padding-top: 70px;
 }
@@ -446,7 +447,7 @@ header h2 a {
 		margin: 110px 0 0 0;
 		padding: 15px 8% 20px 8%;
 		font-size: 1.2em;
-		background: url(../img/feather.png) no-repeat right bottom;
+		background: url(../img/feather.jpg) no-repeat right bottom;
 		background-size: contain;
 	}
 	
@@ -493,6 +494,11 @@ header h2 a {
 	
 	.about-sect img {
 		max-width: 80%;
+	}
+	
+	footer {
+    width: 80%;
+	margin: 100px 10% 0;
 	}
 }
 
