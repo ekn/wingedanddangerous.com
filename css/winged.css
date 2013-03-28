@@ -319,12 +319,22 @@ nav li {
 	margin: 10px 0;
 }
 
+.sidebar-nav h3 {
+	margin-top: 20px;
+}
+
 footer p {
 	color: #eee;
 	font-size: .8em;
 	line-height: 1em;
 	padding: 10px 0;
 	text-align: center;
+}
+
+p.small-em {
+	font-size: .9em;
+	line-height: 1.2em;
+	font-style: italic;
 }
 
 /*  SITE LOGO ------------------------------------------ */
