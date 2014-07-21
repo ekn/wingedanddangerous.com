@@ -7,31 +7,37 @@ body {
 	color: #555;
 }
 
-a:link {color:#5b9486; text-decoration: underline;}     
+a:link {color:#5b9486; text-decoration: none;}     
 a:visited {color:#5b9486; text-decoration: none;} 
-a:hover {color:#fff200; text-decoration: none;}  
-a:active {color:#fff200;text-decoration: none;}
+a:hover {color:#5b9486; text-decoration: underline;}  
+a:active {color:#5b9486;text-decoration: underline;}
 
 h1 {
 	display: block;
-	font-family: 'Antic Slab', sans-serif;
-    font-size: 1.5em;      /* 40px/16px = 2.5em */
-    font-weight: 400;
+	font-family: 'Roboto Slab', sans-serif;
+    font-size: 1em;      /* 40px/16px = 2.5em */
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
-	font-family: 'Antic Slab', sans-serif;
-    font-weight: 400;    
+	font-family: 'Roboto Slab', sans-serif;
+    font-weight: 100;    
     font-size: 3em;      /* 40px/16px = 2.5em */
     text-align: center;
     margin: 20px auto;
+    letter-spacing: 1px;
 }
 
 h3 {
-	font-family: 'Antic Slab', sans-serif;
-	font-weight: 400; 
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 300; 
 	font-size: 1.2em;
 	margin: 0 auto;
+	letter-spacing: 1px;
 }
 
 p {
@@ -185,13 +191,15 @@ nav ul {
 }
 
 nav li {
-	width: 19%;
+	width: auto;
+	margin: 0 1.5%;
 	padding: 8px 0;
 	color: #fff;
-	font-family: 'Antic Slab', sans-serif;
-    font-size: 1.2em;
-    font-weight: 400;
+	font-family: 'Roboto Slab', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-left {
@@ -211,7 +219,7 @@ nav li {
 	display: block;
 	z-index: 10;
 	width: 10%;
-	margin: 0 7% 2px 7%;
+	margin: 30px auto;
 	padding: 0;
 	font-size: 2em;
 }
@@ -219,6 +227,8 @@ nav li {
 .nav-logo a {
 	width: 90px;
 	height: 38px;
+	margin: 0;
+	padding: 0;
 	background: url({{ site.baseurl }}/img/winged-A.png);
 	}
 		
@@ -267,17 +277,19 @@ nav li {
 
 /* ADDITIONAL TEXT STYLES ------------------------------------------ */
 
+
+/* NOT NEEDED JULY 21 2014
+
 .masthead h1 {
     width: 100%;
-    height: 161px;
-	margin: 30px 0 30px 0;      /* 10px/960px = .010416667 */
-	padding: 15px 0 30px 15px;
+	margin: 80px 0 30px;      
+	padding: 0;
 	text-align: left;
 	line-height: 1.3em;
 	color: #666;
-	background: url({{ site.baseurl }}/img/feather.jpg) no-repeat center top;
-	background-size: contain;
-}
+} 
+
+*/
 
 .project-head h1 {
 	display: none;
@@ -289,8 +301,8 @@ nav li {
 
 .folio h3 {
 	font-size: 1.1em;
-	margin: 0 auto 5px;
-	text-align: center;
+	margin: 10px auto;
+	text-align: left;
 }
 
 .about h2, .about h3, .about p {
@@ -302,12 +314,13 @@ nav li {
 }
 
 .callout p:first-line {
-	font-family: 'Antic Slab', sans-serif;
+	font-family: 'Roboto Slab', sans-serif;
     font-size: 1.3em;
-    font-weight: 400;
+    font-weight: 300;
     font-style: italic;
     line-height: 1.5em;
     color: #ff1100;
+    letter-spacing: 1px;
 }
 
 .project-content p {
