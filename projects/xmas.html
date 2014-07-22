@@ -8,27 +8,24 @@
 </head>
 <body>
 {% include nav.html %}
-<header class="project-head">
-	<div class="logo"><a id="top" href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/img/winged-xv.png" alt="winged" /></a></div>
-	<h1>Winged and Dangerous<br />is Elisabeth Nicula Design.</h1>
-</header>
 <div class="portfolio">
 	<header>
 		<h2>Christmas <em>in Space</em></h2>
 	</header>
 	<div class="sidebar-about">
 		<h3>About Christmas <em>in Space</em></h3>
-		<p class="small-em">Client: My Christmas List</p><p>The universe provides a relatively untapped wealth of Christmas imagery. My annual holiday card takes advantage.</p>
+		<p class="small-em">Client: My Christmas List<br>Role: Supreme Commander</p><p>The universe provides a relatively untapped wealth of Christmas imagery. My annual holiday card takes advantage.</p>
 	</div><!-- end .sidebar-about -->		
 	<div class="project-content">
+		<img src="{{ site.baseurl }}/img/sl-xmas2013.png" alt="card" width="540" height="724" />
+		<p>2012</p>
 		<img src="{{ site.baseurl }}/img/sl-xmas2012.jpg" alt="card" width="540" height="550" />
 		<p>2012</p>	
 		<img src="{{ site.baseurl }}/img/sl-xmas2011.jpg" alt="card" width="540" height="723" />
 		<p>2011</p>
 	</div><!-- end .project-content -->
 	<div class="sidebar-nav">
-		<h3>Other Web &amp; Print Projects</h3>
-		{% include nav-web.html %}
+		{% include nav-print.html %}
 	</div><!-- end .sidebar-nav -->
 </div><!-- end .portfolio -->
 {% include about.html %}
