@@ -269,6 +269,11 @@ filter: none;
 -webkit-filter: grayscale(0);
 }
 
+.project-content a:link img, .about a:link img {
+	filter: none;
+	-webkit-filter: grayscale(0);
+}
+
 /* PROJECT PAGES ------------------------------------------ */
 
 .sidebar-nav, .sidebar-about {
@@ -414,11 +419,6 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 	color: #ff1100;
 }
 
-.project-content a:link img, .about a:link img {
-	filter: none;
-	-webkit-filter: grayscale(0);
-}
-
 /* MEDIA QUERIES FOR RESPONSIVENESS ------------------------------------------ */
 
 @media screen and (max-width: 1050px) {
@@ -429,6 +429,11 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
     	padding: 5px auto;
     	font-size: .9em;
     }
+    
+    a:link img[src*="th"] {
+		filter: none;
+		-webkit-filter: grayscale(0);
+	}
 }
 
 
@@ -463,6 +468,10 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 	    max-width: 40%;
 	    height: auto;
 		margin: 15px 30% 0 30%;
+		background-color: #F2F2F2;
+	}
+	
+	.masthead-container nav {
 		background-color: #FFF;
 	}
 	
