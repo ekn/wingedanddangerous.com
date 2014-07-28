@@ -516,9 +516,22 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 
 @media screen and (max-width: 500px) {
 
-	nav {
+	.nav-right {
 		display: none;
 	}
+	
+	nav ul {
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+	h1 {
+	width: 100%;
+	margin: 0;
+	padding: 8px 0;
+    font-size: 1.5em;
+    }
 	
 	.logo {
 		position: relative;
@@ -533,13 +546,7 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 	}
 	
 	.masthead h2 {
-	    width: 60%;
-	    height: auto;
-		margin: 0 20%;
-		padding: 0;
-		font-size: 1.5em;
-		text-align: center;
-		background: none;
+	    display: none;
 	}
 	
 	.masthead h3 {
@@ -559,9 +566,9 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 }
 
 	.masthead ul {
-		width: 60%;
+		width: 80%;
 	    height: auto;
-		margin: 10px 20%;
+		margin: 10px 10%;
 		padding: 0;
 	}
 	
