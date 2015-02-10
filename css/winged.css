@@ -460,7 +460,6 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 		background-color: #F2F2F2;
 	}
 	
-	
 	nav ul {
 		padding-top: 8px;
 	}
@@ -501,7 +500,12 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 }
 
 @media screen and (max-width: 500px) {
-
+    
+    nav {
+	    max-width: 100%;
+	    margin: 0;
+    }
+    
 	.nav-right {
 		display: none;
 	}
@@ -520,9 +524,8 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
     text-align: center;
     }
 		
-	.masthead h2 {
-	    display: none;
-	    text-align: center;
+	.portfolio h2 {
+	    font-size: 2em;
 	}
 	
 	.masthead h3 {
