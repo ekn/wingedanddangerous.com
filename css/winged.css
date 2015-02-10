@@ -67,15 +67,15 @@ li {
 
 /* CLEAR FIX ------------------------------------------ */
 
-nav, header, .portfolio, .folio, .about, .masthead {*zoom: 1;}
-nav:before, nav:after, header:before, header:after, .portfolio:before, .portfolio:after, folio:before, .folio:after, .about:before, .about:after, .masthead:before, .masthead:after {content: ""; display: table;}
-nav:after, header:after, .portfolio:after, .folio:after, .about:after, .masthead:after {clear: both;}
+nav, header, .portfolio, .folio, .about, {*zoom: 1;}
+nav:before, nav:after, header:before, header:after, .portfolio:before, .portfolio:after, folio:before, .folio:after, .about:before, .about:after {content: ""; display: table;}
+nav:after, header:after, .portfolio:after, .folio:after, .about:after {clear: both;}
 
 /* POSITIONING ------------------------------------------ */
 
-.portfolio, .about, header, .masthead {
+.portfolio, .about, header {
 	margin: 0 auto;
-    padding: 0 0 1em 0;
+    padding: 0;
     max-width: 60em;      /* 960px/16px = 60em */
 }
 
@@ -83,22 +83,6 @@ nav:after, header:after, .portfolio:after, .folio:after, .about:after, .masthead
 	padding-top: 15px;
 	}
 	
-.mast-sect {
-	display: block;
-	width: 100%
-	margin: 0 0 20px;      /* 20px/960px = 0.0208333 */
-	padding: 30px 0;
-}
-
-.masthead ul {
-	margin: 0;
-	padding: 0;
-}
-
-.masthead li {
-	float: none;
-}
-
 .portfolio {
 	padding-top: 20px;
 }
@@ -125,6 +109,7 @@ li.callout {
 
 .about-container {
 	background: rgba(255,17,0, .7);
+	margin-top: 20px;
 	padding: 20px 0;
 	}
 
@@ -216,7 +201,7 @@ nav li {
 /** FOR PROJECT PAGES ONLY  **/
 
 .nav-container { 
-	margin-top: 15px;
+	padding-top: 15px;
 }
 
 /* FOOTER LOGO ------------------------------------------ */
@@ -308,14 +293,6 @@ filter: none;
 }
 
 /* ADDITIONAL TEXT STYLES ------------------------------------------ */
-
-.masthead h2 {
-    width: 100%;
-	padding: 0 10px;
-	text-align: center;
-	line-height: 1.3em;
-	color: rgba(255,17,0,1.0);
-}
 
 .project-head h1 {
 	display: none;
@@ -425,7 +402,6 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 	}
 }
 
-
 @media screen and (max-width: 800px) {	
 
 	.folio li {
@@ -452,12 +428,16 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 
 @media screen and (max-width: 750px) {	
     
+	.masthead-container, .nav-container {
+		background-color: #5b9486;
+		padding-bottom: 20px;
+	}
+	
 	nav {
 		position: relative;
-	    max-width: 40%;
 	    height: auto;
-		margin: 15px 30% 0 30%;
-		background-color: #F2F2F2;
+	    width: 100%;
+		margin: 0 auto;
 	}
 	
 	nav ul {
@@ -469,7 +449,6 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
     	width: 100%;
     	text-align: center;
     	padding: 0;
-    	color: rgba(255,17,0,1.0);
     	font-size: 1em;
     }
     
@@ -481,13 +460,10 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 		display: none;
 	}
         
-    nav a:link {color:#5b9486; text-decoration: none;}     
-	nav a:visited {color:#5b9486; text-decoration: none;} 
+    nav a:link {color:#fff200; text-decoration: none;}     
+	nav a:visited {color:#fff200; text-decoration: none;} 
 	nav a:hover {color:#fff200; text-decoration: none;}  
-	nav a:active {color:#fff200; text-decoration: none;}
-	
-	.masthead h2 {font-size: 2em;}
-		  
+	nav a:active {color:#fff200; text-decoration: none;}		  
 }
     
 @media screen and (max-width: 700px) {	
@@ -500,57 +476,10 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 }
 
 @media screen and (max-width: 500px) {
-    
-    nav {
-	    max-width: 100%;
-	    margin: 0;
-    }
-    
-	.nav-right {
-		display: none;
-	}
-	
-	nav ul {
-		max-width: 100%;
-		margin: 0;
-		padding: 0;
-	}
-	
-	h1 {
-	width: 100%;
-	margin: 0 auto;
-	padding: 8px 0;
-    font-size: 1.5em;
-    text-align: center;
-    }
-		
+    	
 	.portfolio h2 {
 	    font-size: 2em;
 	}
-	
-	.masthead h3 {
-	    width: 100%;
-		margin: 0 auto;
-		padding: 0;
-		text-align: center;
-	}
-	
-	.mast-sect {
-		display: block;
-		float: none;
-		width: 100%;
-		margin: 0 auto;    
-		padding: 10px 0;
-}
-
-	.masthead ul {
-		width: 80%;
-	    height: auto;
-		margin: 10px 10%;
-		padding: 0;
-	}
-	
-	.masthead li {text-align: center;}
 
 	.folio li {
 		float: none;
