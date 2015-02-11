@@ -387,9 +387,6 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 
 /* MEDIA QUERIES FOR RESPONSIVENESS ------------------------------------------ */
 
-@media screen and (max-width: 1050px) {
-}
-
 @media screen and (max-width: 850px) {
 	nav li {
     	padding: 5px auto;
@@ -426,7 +423,7 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 	}
 }
 
-@media screen and (max-width: 750px) {	
+@media screen and (max-width: 760px) {	
     
 	.masthead-container, .nav-container {
 		background-color: #5b9486;
@@ -436,12 +433,12 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
 	nav {
 		position: relative;
 	    height: auto;
-	    width: 100%;
+	    max-width: 100%;
 		margin: 0 auto;
 	}
 	
 	nav ul {
-		padding-top: 8px;
+		padding: 8px 0 0 0;
 	}
 	
 	nav li, .nav-left, .nav-right {
@@ -463,7 +460,8 @@ header h2 a:hover, header h2 a:active {text-decoration: none;}
     nav a:link {color:#fff200; text-decoration: none;}     
 	nav a:visited {color:#fff200; text-decoration: none;} 
 	nav a:hover {color:#fff200; text-decoration: none;}  
-	nav a:active {color:#fff200; text-decoration: none;}		  
+	nav a:active {color:#fff200; text-decoration: none;}
+			  
 }
     
 @media screen and (max-width: 700px) {	
